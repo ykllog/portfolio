@@ -1,15 +1,7 @@
-.l-content-wrap {
-    .h2__title {
-        margin: 4rem 0;
-    }
-    .point {
-        margin: 75px 0 50px;
-        text-align: center;
-        @include font-size(12);
-        span {
-            line-height: 4rem;
-            color: $color-secondary;
-        }
+section {
+    margin: 5rem 0;
+    @include pc-layout {
+        margin: 10rem 0;
     }
     .content__text {
         p {
@@ -44,6 +36,15 @@
                     @include font-size(12);
                 }
             }
+        }
+    }
+    .point {
+        margin: 75px 0 50px;
+        text-align: center;
+        @include font-size(12);
+        span {
+            line-height: 4rem;
+            color: $color-secondary;
         }
     }
 }

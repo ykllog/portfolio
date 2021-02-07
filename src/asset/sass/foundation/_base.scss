@@ -7,6 +7,7 @@ $color-light: #fff;
 $color-primary: #00478b;
 $color-secondary: #2b669f;
 $color-border: #9b9b9b;
+$color-background: #eee;
 
 
 //*------------------*
@@ -15,9 +16,9 @@ $color-border: #9b9b9b;
 
 //font-family
 //-->ヒラギノver.
-$font-main: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// $font-main: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 //-->游ゴシックver.
-// $font-main:"游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
+$font-main:"游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
 
 //font-size
 @mixin font-size($size) {
@@ -66,7 +67,35 @@ h1 {
     @include font-size(48);
 }
 h2 {
+    position: relative;
+	display: inline-block;
+	width: 100%;
+    margin: 4rem 0;
+	padding: 0 17%;
+	text-align: center;
     @include font-size(32);
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: inline-block;
+        width: 15%;
+        height: 5px;
+        background-color: $color-border;
+        background: linear-gradient(-45deg, transparent, $color-border 10%, $color-border 30%, transparent);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: inline-block;
+        width: 15%;
+        height: 5px;
+        background-color: $color-border;
+        background: linear-gradient(-45deg, transparent, $color-border 70%, $color-border 90%, transparent);
+    }
 }
 h3 {
     @include font-size(24);
@@ -74,4 +103,8 @@ h3 {
 a {
     color: $color-default;
     text-decoration: none;
+    font-weight: bold;
+}
+strong {
+    color: $color-secondary;
 }

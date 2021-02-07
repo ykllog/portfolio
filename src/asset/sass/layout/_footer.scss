@@ -1,5 +1,6 @@
 .l-footer {
-    border-top: solid 1px $color-border;
+    @include font-size(12);
+    text-align: center;
 }
 
 #page_top{

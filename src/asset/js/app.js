@@ -9,9 +9,9 @@ $(() => {
     var mainPos = $(".fv").height();
     $(window).scroll(function () {
       if ($(window).scrollTop() > mainPos) {
-        $(".header__inner").addClass("addColor");
+        $(".l-header").addClass("addColor");
       } else {
-        $(".header__inner").removeClass("addColor");
+        $(".l-header").removeClass("addColor");
       }
     });
     // トップに戻るリンク
