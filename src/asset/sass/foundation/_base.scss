@@ -1,0 +1,77 @@
+//*------------------*
+//*  Base定義
+//*------------------*
+
+$color-default: #222;
+$color-light: #fff;
+$color-primary: #00478b;
+$color-secondary: #2b669f;
+$color-border: #9b9b9b;
+
+
+//*------------------*
+//*  font定義
+//*------------------*
+
+//font-family
+//-->ヒラギノver.
+$font-main: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+//-->游ゴシックver.
+// $font-main:"游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
+
+//font-size
+@mixin font-size($size) {
+    font-size: $size + px; /*IE9以前に対応する*/
+    font-size: ($size / 16) + rem;
+}
+
+
+//*------------------*
+//*  レスポンシブ定義
+//*------------------*
+
+@mixin pc-layout($width: 1001px) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+@mixin tab-layout($width: 576px) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+@mixin sp-layout($width: 575px) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+
+//*------------------*
+//*  共通定義
+//*------------------*
+
+body {
+    @include font-size(16);
+    font-family: $font-main;
+    color: $color-default;
+    line-height: 2;
+    letter-spacing: 0.5em;
+}
+
+img {
+    width: 100%;
+}
+h1 {
+    @include font-size(48);
+}
+h2 {
+    @include font-size(32);
+}
+h3 {
+    @include font-size(24);
+}
+a {
+    color: $color-default;
+    text-decoration: none;
+}

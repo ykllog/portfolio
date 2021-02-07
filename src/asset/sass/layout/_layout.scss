@@ -1,0 +1,34 @@
+/* ==================================
+レイアウト
+===================================== */
+.fv {
+    width: 100%;
+    height: 60vh;
+    margin: 80px 0;
+    background: url(../../asset/image/fv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.l-content-wrap {
+    max-width: 100%;
+    padding-right: 5% !important;
+    padding-left: 5% !important;
+    box-sizing: border-box !important;
+    @include tab-layout() {
+        max-width: 100%;
+        padding-right: 3% !important;
+        padding-left: 3% !important;
+        box-sizing: border-box !important;
+    }
+    @include pc-layout {
+    // max-width: calc(1366px - 4.8%);
+    max-width: 1366px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: content-box !important;
+    padding-right: 2.4% !important;
+    padding-left: 2.4% !important;
+    }
+}

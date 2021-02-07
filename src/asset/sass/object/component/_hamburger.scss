@@ -1,0 +1,114 @@
+#nav-toggle {
+    position: fixed;
+    top: 27px;
+    right: 27px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 100;
+    >div {
+        position: relative;
+        width: 26px;
+    }
+    @include pc-layout {
+        display: none;
+    }
+    span {
+        width: 100%;
+        height: 1.5px;
+        right: 0;
+        display: block;
+        background: #333;
+        position: absolute;
+        transition: transform .6s ease-in-out, top .5s ease;
+        &:nth-child(1) {
+            top: 5px;
+            width: 100%;
+        }
+        &:nth-child(2) {
+            top: 13px;
+            width: 75%;
+        }
+        &:nth-child(3) {
+            top: 21px;
+            width: 50%;
+        }
+    }
+}
+
+.open {
+    overflow: hidden;
+    #sp-nav {
+        visibility: visible;
+        li {
+            opacity: 1;
+            transform: translateX(0);
+            transition: transform 1s ease, opacity .9s ease;
+        }
+    }
+    #nav-toggle span {
+        background: $color-light;
+        &:nth-child(1) {
+            top: 15px;
+            width: 100%;
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            top: 15px;
+            width: 0;
+            left: 50%;
+        }
+        &:nth-child(3) {
+            top: 15px;
+            width: 100%;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+#sp-nav {
+    background: $color-default;
+    color: $color-light;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity .1s ease, visibility .9s ease;
+    ul {
+        padding: 120px 95px;
+        li {
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(100px) scale(0.6) rotate(20deg);
+            transition: transform .6s ease, opacity .2s ease;
+            &:nth-child(2) {
+                transition-delay: .15s;
+            }
+            &:nth-child(3) {
+                transition-delay: .3s;
+            }
+            &:nth-child(4) {
+                transition-delay: .45s;
+            }
+            &:nth-child(5) {
+                transition-delay: .6s;
+            }
+            a {
+                letter-spacing: 0.1rem;
+                display: block;
+                color: $color-light;
+                padding: 0.25rem 1rem;
+                transition: 0.3s;
+                &:hover {
+                    padding: 0.25rem 1rem;
+                    background-color: rgba(155, 155, 155, 0.2);
+                }
+            }
+        }
+    }
+}

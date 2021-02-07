@@ -1,0 +1,43 @@
+.l-header {
+  background-color: $color-light;
+  width: 100%;
+  height: 80px;
+  padding: 10px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &__inner {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    &__logo {
+      line-height: 40px;
+    }
+  }
+  #pc-nav {
+    display: none;
+    @include pc-layout {
+      display: block;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      justify-content: center;
+      ul {
+        display: flex;
+        li {
+          margin: 0 25px;
+          a {
+            display: block;
+            text-decoration: none;
+            padding: 0.25rem 1rem;
+            transition: 0.3s;
+            &:hover {
+              background-color: rgba(155, 155, 155, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
