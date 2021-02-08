@@ -12,7 +12,7 @@
     position: fixed;
     right: 25px;
     bottom: 25px;
-    background-color: $color-light;
+    background-color: $color-background;
     opacity: 0.6;
     border-radius: 50%;
     a{
@@ -30,12 +30,13 @@
             position: absolute;
             width: 25px;
             height: 25px;
-            top: -5px;
+            top: 0;
             bottom: 0;
             right: 0;
             left: 0;
-            margin: auto;
+            margin: 0 auto;
             text-align: center;
+            align-items: center;
         }
     }
 }
