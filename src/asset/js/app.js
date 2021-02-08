@@ -4,15 +4,8 @@ $(() => {
     $('#nav-toggle').on('click', function() {
       $('body').toggleClass('open');
     });
-    // ヘッダー固定(SP)
-    // fvを超えたらスクロールでheaderに色を付ける
-    var mainPos = $(".fv").height();
-    $(window).scroll(function () {
-      if ($(window).scrollTop() > mainPos) {
-        $(".l-header").addClass("addColor");
-      } else {
-        $(".l-header").removeClass("addColor");
-      }
+    $('#sp-nav').on('click', function() {
+      $('body').removeClass('open');
     });
     // トップに戻るリンク
     var pagetop = $('#page_top');   
