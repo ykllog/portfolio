@@ -4,10 +4,12 @@
 
 $color-default: #222;
 $color-light: #fff;
-$color-primary: #00478b;
-$color-secondary: #2b669f;
-$color-border: #9b9b9b;
-$color-background: #eee;
+$color-accent1: #990087;
+$color-accent2: #E6CDE3;
+$color-accent3: #FFE3FC;
+$color-border: #665b65;
+$color-background: #e7e7eb;
+$color-none: rgba(0, 0, 0, 0);
 
 
 //*------------------*
@@ -106,5 +108,5 @@ a {
     font-weight: bold;
 }
 strong {
-    color: $color-secondary;
+    color: $color-accent1;
 }
