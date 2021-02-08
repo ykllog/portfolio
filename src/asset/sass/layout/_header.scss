@@ -1,18 +1,19 @@
 .l-header {
-  background-color: $color-light;
+  background-color: $color-border;
   width: 100%;
   height: 80px;
-  padding: 10px 3%;
+  padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   &__inner {
+    padding: 0 3%;
     display: flex;
-    height: 80px;
-    align-items: center;
     &__logo {
-      line-height: 40px;
+      @include font-size(24);
+      color: $color-accent2;
+      line-height: 60px;
     }
   }
   #pc-nav {
@@ -22,22 +23,34 @@
       position: fixed;
       top: 25px;
       right: 25px;
-      justify-content: center;
       ul {
         display: flex;
         li {
-          margin: 0 25px;
+          margin: 0 1rem;
           a {
             display: block;
-            text-decoration: none;
+            font-weight: normal;
             padding: 0.25rem 1rem;
             transition: 0.3s;
+            color: $color-background;
             &:hover {
-              background-color: rgba(155, 155, 155, 0.2);
+              color: $color-border;
+              background-color: $color-accent2;
+              border-radius: 50%;
             }
           }
         }
       }
     }
   }
+  &__border {
+    width: 100%;
+    height: 25px;
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from($color-border), color-stop(0.49, $color-border), color-stop(0.51, $color-none), to($color-none);
+    -webkit-background-size: 49px 100%;
+}
+}
+
+.addColor {
+  background-color: $color-border;
 }
