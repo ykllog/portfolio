@@ -1,0 +1,15 @@
+#portfolio {
+    padding-top: 105px;
+    p, .twitter {
+        margin: 2rem 0;
+        @include tab-layout {
+            margin: 2rem;
+        }
+    }
+    .return {
+        margin-top: 8rem;
+        a {
+            @include font-size(24);
+        }
+    }
+}

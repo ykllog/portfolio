@@ -3,32 +3,35 @@
 ===================================== */
 .fv {
     width: 100%;
-    height: 60vh;
-    margin: 80px 0;
+    height: 30vh;
+    margin: 80px 0 2rem;
     background: url(../../asset/image/fv.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @include tab-layout {
+        height: 50vh;
+        margin: 80px 0 7rem;
+    }
+    @include pc-layout {
+        height: 70vh;
+    }
 }
 
 .l-content-wrap {
     max-width: 100%;
-    padding-right: 5% !important;
-    padding-left: 5% !important;
+    padding: 0 5% 8rem !important;
     box-sizing: border-box !important;
     @include tab-layout() {
         max-width: 100%;
-        padding-right: 3% !important;
-        padding-left: 3% !important;
+        padding: 0 3% 8rem !important;
         box-sizing: border-box !important;
     }
     @include pc-layout {
-    // max-width: calc(1366px - 4.8%);
-    max-width: 1366px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: content-box !important;
-    padding-right: 2.4% !important;
-    padding-left: 2.4% !important;
+        // max-width: calc(1024px - 4.8%);
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 2.4% 8rem !important;
+        box-sizing: content-box !important;
     }
 }

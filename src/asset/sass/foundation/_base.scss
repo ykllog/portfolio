@@ -4,9 +4,12 @@
 
 $color-default: #222;
 $color-light: #fff;
-$color-primary: #00478b;
-$color-secondary: #2b669f;
-$color-border: #9b9b9b;
+$color-accent1: #990087;
+$color-accent2: #E6CDE3;
+$color-accent3: #FFE3FC;
+$color-border: #665b65;
+$color-background: #e7e7eb;
+$color-none: rgba(0, 0, 0, 0);
 
 
 //*------------------*
@@ -15,9 +18,9 @@ $color-border: #9b9b9b;
 
 //font-family
 //-->ヒラギノver.
-$font-main: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// $font-main: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 //-->游ゴシックver.
-// $font-main:"游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
+$font-main:"游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
 
 //font-size
 @mixin font-size($size) {
@@ -30,17 +33,17 @@ $font-main: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリ�
 //*  レスポンシブ定義
 //*------------------*
 
-@mixin pc-layout($width: 1001px) {
+@mixin pc-layout($width: 901px) {
     @media screen and (min-width: $width) {
         @content;
     }
 }
-@mixin tab-layout($width: 576px) {
+@mixin tab-layout($width: 701px) {
     @media screen and (min-width: $width) {
         @content;
     }
 }
-@mixin sp-layout($width: 575px) {
+@mixin sp-layout($width: 700px) {
     @media screen and (max-width: $width) {
         @content;
     }
@@ -57,6 +60,8 @@ body {
     color: $color-default;
     line-height: 2;
     letter-spacing: 0.5em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 img {
@@ -66,7 +71,38 @@ h1 {
     @include font-size(48);
 }
 h2 {
+    position: relative;
+	display: inline-block;
+	width: 100%;
+    margin: 2rem 0;
+	padding: 0 17%;
+	text-align: center;
     @include font-size(32);
+    @include pc-layout {
+        margin: 4rem 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: inline-block;
+        width: 15%;
+        height: 5px;
+        background-color: $color-border;
+        background: linear-gradient(-45deg, transparent, $color-border 10%, $color-border 30%, transparent);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: inline-block;
+        width: 15%;
+        height: 5px;
+        background-color: $color-border;
+        background: linear-gradient(-45deg, transparent, $color-border 70%, $color-border 90%, transparent);
+    }
 }
 h3 {
     @include font-size(24);
@@ -74,4 +110,8 @@ h3 {
 a {
     color: $color-default;
     text-decoration: none;
+    font-weight: bold;
+}
+strong {
+    color: $color-accent1;
 }
