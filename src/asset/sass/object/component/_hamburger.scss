@@ -37,6 +37,9 @@
 
 .open {
     overflow: hidden;
+    @include pc-layout {
+        display: none;
+    }
     #sp-nav {
         visibility: visible;
         li {
@@ -79,6 +82,9 @@
     visibility: hidden;
     opacity: 1;
     transition: opacity .1s ease, visibility .9s ease;
+    @include pc-layout {
+        display: none;
+    }
     ul {
         padding: 120px 95px;
         li {
