@@ -78,9 +78,6 @@ h2 {
 	padding: 0 17%;
 	text-align: center;
     @include font-size(32);
-    @include pc-layout {
-        margin: 4rem 0;
-    }
     &:before {
         content: '';
         position: absolute;
