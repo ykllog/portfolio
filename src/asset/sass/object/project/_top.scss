@@ -136,6 +136,56 @@
 #other {
     padding-top: 105px;
     .content__text {
+        margin-top: -105px;
         padding-top: 5rem;
+        &__items {
+            @include tab-layout {
+                display: flex;
+                flex-wrap: row nowrap;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+                &--inner:first-child {
+                    flex-basis: 70%;
+                }
+                &--inner:last-child {
+                    width: 30%;
+                    min-width: 250px;
+                }
+            }
+                &--inner {
+                margin: 0 5%;
+                p {
+                    margin: 2rem 0;
+                }
+                &--event {
+                    position: relative;
+                    margin-bottom: 6rem;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        display: inline-block;
+                        width: 10px;
+                        height: 5px;
+                        bottom: -3rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: $color-border;
+                        border-radius: 2px;
+                    }
+                    img {
+                        border-radius: 15px;
+                    }
+                }
+                @include tab-layout {
+                    &--event:last-child {
+                        margin-bottom: 0;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
