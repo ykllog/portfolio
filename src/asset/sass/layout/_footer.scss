@@ -8,7 +8,7 @@
     }
 }
 
-#page_top{
+#page_top {
     width: 50px;
     height: 50px;
     position: fixed;
@@ -17,13 +17,13 @@
     background-color: $color-background;
     opacity: 0.6;
     border-radius: 50%;
-    a{
+    a {
         position: relative;
         display: block;
         width: 50px;
         height: 50px;
         text-decoration: none;
-        &::before{
+        &::before {
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             content: '\f106';
