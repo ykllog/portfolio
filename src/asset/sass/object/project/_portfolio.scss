@@ -1,13 +1,20 @@
 #portfolio {
     padding-top: 105px;
-    p, .twitter {
-        margin: 2rem 0;
+    .content__text {
+        margin: 0 5%;
         @include tab-layout {
-            margin: 2rem;
+            .img {
+                width: 75%;
+                height: auto;
+                margin: 4rem auto 0;
+            }
+        }
+        p, .twitter {
+            margin-top: 2rem;
         }
     }
     .return {
-        margin-top: 8rem;
+        margin: 6rem 5% 0;
         a {
             @include font-size(24);
         }
