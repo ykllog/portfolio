@@ -8,13 +8,7 @@
   left: 0;
   z-index: 10;
   &__inner {
-    padding: 0 3%;
-    display: flex;
-    &__logo {
-      @include font-size(24);
-      color: $color-accent2;
-      line-height: 60px;
-    }
+    display: none;
   }
   #pc-nav {
     display: none;
@@ -46,7 +40,8 @@
   &__border {
     width: 100%;
     height: 25px;
+    margin-top: 60px;
     background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from($color-border), color-stop(0.49, $color-border), color-stop(0.51, $color-none), to($color-none));
-    -webkit-background-size: 49px 100%;
+    background-size: 49px 100%;
   }
 }
