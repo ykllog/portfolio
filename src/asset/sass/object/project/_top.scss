@@ -16,10 +16,7 @@
             &:first-child {
                 @include tab-layout {
                     display: flex;
-                    flex-wrap: row nowrap;
                     justify-content: center;
-                    align-items: flex-start;
-                    align-content: flex-start;
                 }
             }
             &--inner:first-child {
@@ -144,10 +141,7 @@
         &__items {
             @include tab-layout {
                 display: flex;
-                flex-wrap: row nowrap;
                 justify-content: center;
-                align-items: flex-start;
-                align-content: flex-start;
                 &--inner:first-child {
                     flex-basis: 70%;
                 }
