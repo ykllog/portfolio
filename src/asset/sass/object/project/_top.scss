@@ -2,6 +2,9 @@
     padding-top: 105px;
     .content__text {
         margin-top: -105px;
+        @include tab-layout {
+            padding-top: 5rem;
+        }
         &__items {
             margin: 0 5%;
             p {
